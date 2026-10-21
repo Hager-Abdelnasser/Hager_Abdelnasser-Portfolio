@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hager Abdelnasser | Data Engineer & Analyst</title>
+<meta name="description" content="Portfolio of Hager Abdelnasser: data engineering, analytics, BI and AI solutions.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#02070b;--card:rgba(6,19,28,.72);--tx:#e9f6fb;--mu:#8fb0bf;--ac:#2de1e6;--ac2:rgba(45,225,230,.09);--bd:#12313f;--code:#010508}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:16px/1.65 Inter,system-ui,sans-serif;background:var(--bg);color:var(--tx)}
+a{color:var(--ac);text-decoration:none}img{max-width:100%}
+.w{max-width:1080px;margin:auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+nav .w{display:flex;align-items:center;gap:18px;height:58px;overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto}nav a{color:var(--mu);font-size:14px;font-weight:500}nav a:hover{color:var(--ac)}
+button{font:inherit;cursor:pointer}.th{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:8px;padding:4px 10px}
+section{padding:64px 0}h2{font-size:28px;margin:0 0 8px}h2+p.sub{color:var(--mu);margin:0 0 28px}
+.hero{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:center;padding:70px 0 40px}
+.hero h1{font-size:clamp(34px,6vw,54px);line-height:1.1;margin:8px 0}.hero .role{color:var(--ac);font-weight:600;font-size:18px}
+.hero p{color:var(--mu);max-width:560px}.photo{width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:4px solid var(--card);box-shadow:0 14px 40px rgba(0,0,0,.18)}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--ac);margin:4px 6px 4px 0}
+.btn.p{background:var(--ac);color:#fff}.btn.s{color:var(--ac)}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.bd{background:var(--ac2);color:var(--ac);padding:4px 12px;border-radius:99px;font-size:13px;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px}
+.tl{border-left:2px solid var(--bd);margin-left:6px}.tl .it{position:relative;padding:0 0 22px 24px}
+.tl .it:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ac)}
+.tl h3{margin:0;font-size:17px}.tl .d{color:var(--mu);font-size:13px}.tl p{margin:4px 0 0;color:var(--mu);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.chips span{background:var(--ac2);color:var(--tx);padding:3px 10px;border-radius:8px;font-size:13px}
+.card h3{margin:0 0 4px;font-size:18px}.card .m{color:var(--mu);font-size:14px}
+.pj img.pv{width:100%;border-radius:10px;border:1px solid var(--bd);margin-bottom:12px;max-height:230px;object-fit:cover;object-position:top}
+.pj ul{padding-left:18px;color:var(--mu);font-size:15px}details{margin-top:10px}summary{cursor:pointer;color:var(--ac);font-weight:600}
+pre{background:var(--code);color:#d6e2ee;padding:14px;border-radius:10px;overflow-x:auto;font-size:12.5px;line-height:1.5}
+.ct a.card{display:block;color:inherit}.ct img{border-radius:8px;margin-top:10px;border:1px solid var(--bd)}
+form{display:grid;gap:12px;max-width:620px}input,textarea,select{width:100%;padding:11px 14px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.st{color:#e0a800;letter-spacing:2px}.fb{margin-top:26px;display:grid;gap:12px;max-width:760px}
+footer{padding:30px 0;text-align:center;color:var(--mu);font-size:14px;border-top:1px solid var(--bd)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:left}.hero .pw{max-width:230px;order:-1}section{padding:48px 0}}
+body{background:radial-gradient(900px 520px at 85% -5%,#07354d88,transparent),radial-gradient(700px 400px at 0% 40%,#0a2a4a55,transparent),#02070b}
+#bg{position:fixed;inset:0;z-index:-1;width:100%;height:100%}#pb{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,#1e6bff,#2de1e6);box-shadow:0 0 12px #2de1e6}
+nav{background:rgba(2,7,11,.75)}nav a{position:relative;transition:.25s}nav a.on{color:var(--ac)}nav a.on:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--ac);box-shadow:0 0 8px var(--ac)}
+h2{display:inline-block;background:linear-gradient(90deg,#fff,#2de1e6);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2:after{content:"";display:block;height:3px;width:56px;margin-top:6px;border-radius:3px;background:linear-gradient(90deg,#1e6bff,#2de1e6);box-shadow:0 0 10px #2de1e6}
+.hero h1{background:linear-gradient(90deg,#fff 30%,#2de1e6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{min-height:28px;display:block;text-shadow:0 0 14px rgba(45,225,230,.5)}
+.pw{position:relative;animation:fl 5s ease-in-out infinite}.pw:before{content:"";position:absolute;inset:-6px;border-radius:34px;background:conic-gradient(#2de1e6,#1e6bff,#02070b,#2de1e6);filter:blur(14px);opacity:.8;animation:sp 7s linear infinite}
+.photo{position:relative;border:3px solid #2de1e6;box-shadow:0 0 30px rgba(45,225,230,.35)}
+@keyframes sp{to{transform:rotate(360deg)}}@keyframes fl{50%{transform:translateY(-10px)}}
+.btn{transition:.25s}.btn.p{background:linear-gradient(90deg,#1e6bff,#2de1e6);color:#02070b;border-color:transparent}.btn:hover{transform:translateY(-3px);box-shadow:0 0 22px rgba(45,225,230,.55)}
+.card{position:relative;overflow:hidden;backdrop-filter:blur(6px);transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:.3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(45,225,230,.16),transparent 70%)}
+.card:hover{transform:translateY(-6px);border-color:var(--ac);box-shadow:0 12px 36px rgba(0,0,0,.5),0 0 24px rgba(45,225,230,.22)}.card:hover:before{opacity:1}
+.chips span{border:1px solid rgba(45,225,230,.22);transition:.2s}.chips span:hover{transform:translateY(-2px) scale(1.06);background:rgba(45,225,230,.2);box-shadow:0 0 12px rgba(45,225,230,.4)}
+.tl{border-color:#12414f}.tl .it:before{box-shadow:0 0 0 4px rgba(45,225,230,.18),0 0 12px #2de1e6;animation:pu 2.4s infinite}@keyframes pu{50%{box-shadow:0 0 0 8px rgba(45,225,230,.05),0 0 18px #2de1e6}}
+.pj{display:flex;flex-direction:column}.pj .acts{margin-top:auto;padding-top:14px;margin-bottom:0}.pj img.pv{transition:transform .5s}.pj:hover img.pv{transform:scale(1.04)}
+.th5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.th5 img{margin:0;width:100%;transition:.2s}.th5 a:hover img{transform:scale(1.12);box-shadow:0 0 14px #2de1e6}.wide{grid-column:1/-1}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none;transition:opacity .7s,transform .25s,border-color .25s,box-shadow .25s}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<nav><div class="w"><b>HA</b><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#soft">Soft Skills</a><a href="#projects">Projects</a><a href="#certs">Certificates</a><a href="#feedback">Feedback</a><a href="#contact">Contact</a></div></nav>
+<canvas id="bg"></canvas><div id="pb"></div>
+<main class="w">
+<div class="hero"><div><span class="role" id="role"></span><h1 id="nm"></h1><p id="tag"></p><div id="hb"></div><div class="badges" id="bg"></div></div><div class="pw"><img class="photo" src="assets/photo.jpg" alt="Hager Abdelnasser"></div></div>
+<section id="about"><h2>About</h2><p class="sub" id="ab"></p><div class="grid" id="ed"></div></section>
+<section id="experience"><h2>Experience & Training</h2><p class="sub">Internships, programs and intensive trainings.</p><div class="tl" id="ex"></div></section>
+<section id="skills"><h2>Skills & Tools</h2><p class="sub">Grouped by area.</p><div class="grid" id="sk"></div></section>
+<section id="soft"><h2>Soft Skills</h2><p class="sub">How I work.</p><div class="grid" id="so"></div></section>
+<section id="projects"><h2>Projects</h2><div class="grid" id="pj"></div></section>
+<section id="certs"><h2>Certificates</h2><p class="sub">Tap a certificate to open it.</p><div class="grid ct" id="ce"></div></section>
+<section id="feedback"><h2>Feedback</h2><p class="sub">Leave a message. It appears on this page after my approval.</p>
+<form id="ff"><input id="fn" placeholder="Your name" maxlength="60" required><select id="fr"><option value="0">Rating (optional)</option><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select><textarea id="fm" rows="4" placeholder="Your feedback" maxlength="1000" required></textarea><button class="btn p" type="submit">Send feedback</button><small id="fs"></small></form>
+<div class="fb" id="fw"></div></section>
+<section id="contact"><h2>Contact</h2><p class="sub">Let's talk about data, pipelines and opportunities.</p><div id="ctc"></div></section>
+</main><footer>© 2026 Hager Abdelnasser</footer>
+<script>
+const CONFIG={
+ firebase:{apiKey:"AIzaSyBLwPKqlgqPKmulUc7FzD3LJzHkWz1JPYE",authDomain:"hager-portfolio-64f60.firebaseapp.com",projectId:"hager-portfolio-64f60",storageBucket:"hager-portfolio-64f60.firebasestorage.app",messagingSenderId:"987533832436",appId:"1:987533832436:web:34ac17b38aa73bb4cc6ea1"},
+ formspree:"https://formspree.io/f/mvkzjqdk"
+};
+/* ===== EDIT YOUR CONTENT HERE ===== */
+const DATA={
+name:"Hager Abdelnasser",role:"Data Engineer · Data Analyst · AI Solutions",
+tagline:"Third-year Scientific Computing student who builds end-to-end data solutions: ETL pipelines, data warehouses and BI dashboards that turn raw data into decisions.",
+badges:["Data Engineering","ETL & Warehousing","Power BI · Tableau","Python · SQL"],
+about:"Analytical and detail-oriented, with a strong foundation in data engineering, analytics and software development. I design relational databases, build robust ETL pipelines with automated quality checks, and deliver interactive dashboards. Currently a Data Engineer in the DEPI scholarship and a Data & AI Solutions Intern at HVIA.",
+edu:[{t:"B.Sc. Computer & Information Sciences",m:"Ain Shams University · Scientific Computing Department · 3rd year · Expected 2028",c:["Data Structures","OOP","Database Management Systems","Discrete Mathematics","Linear Algebra","Probability & Statistics","Statistical Analysis","Artificial Intelligence","Computer Organization & Architecture","Operations Research","Logic Design","Electronics"]},
+{t:"Upcoming coursework",m:"Remaining semesters",c:["Machine Learning","Neural Networks & Deep Learning","Computer Vision","Digital Signal Processing","Software Engineering","Operating Systems","Computer Networks","System Analysis & Design","Programming Language Concepts","High Performance Computing","Numerical Computing","Modeling & Simulation","Computational Geometry","Algorithms Design","Network Security","Computer Graphics"]}],
+exp:[
+["Data & AI Solutions Intern","HVIA (startup)","Oct 2026 – Present","ETL, data extraction, analysis and solution proposals for business problems."],
+["Data Engineer","DEPI scholarship","Jul 2026 – Present","Data engineering track covering SQL Server, Python pipelines, data warehousing, big data, Azure and deployment."],
+["Python Programming Intern","CodeAlpha (remote)","10 Oct – 10 Nov 2026","Python application development tasks."],
+["Data Analysis Using Python Intern","Auspify Technologies (remote)","Oct 2026 – Present","Practical data analysis projects with Python."],
+["Data Science Program","GCI World · Matsuo-Iwasawa Lab, University of Tokyo","Sep 2026 – Present","International data science program."],
+["Data Analysis Training","Orange Center","9 – 23 Oct 2026","Data analysis training program."],
+["Machine Learning Intensive (32 hrs)","Huawei, with Ministry of Youth and Sports","9 – 20 Oct 2026","Intensive ML training. Certificate pending."],
+["Data Analysis Track","GDG on Campus CIC","2026","Data analysis track participant."],
+["Data Analytics & BI (144 hrs)","Information Technology Institute (ITI)","8 Aug – 9 Sep 2026","Data warehouse, SQL Server, advanced SQL, SQLBI, statistics, Power BI, Tableau, Excel, GenAI and AI agents."]],
+skills:{"Programming":["Python","C++","T-SQL","Java","Kotlin"],
+"Data Engineering":["ETL Pipelines","Data Quality Automation","Error Logging","Data Warehousing (Star Schema)","SQL Server (SSMS, SSIS, SSAS, SSRS)","MySQL","SQLite","MongoDB"],
+"Analysis & Visualization":["Pandas","NumPy","Matplotlib","Seaborn","Plotly","Excel Analysis","Statistics & Probability"],
+"Business Intelligence":["Power BI","Tableau","DAX","Power Query","Microsoft SQLBI"],
+"ML & AI":["Scikit-learn","Decision Trees","Logistic Regression","MindSpore","Linear Algebra","Generative AI & AI Agents"],
+"Frameworks":["Streamlit","Dash","Flask","Tkinter"],
+"Cloud & Networking":["AWS","Azure","Networking Fundamentals"],
+"Tools":["Git","GitHub","GitHub Desktop","Visual Studio Code (VS Code)","Visual Studio","PyCharm","Jupyter Notebook","SSMS","Cmder"],
+"Fundamentals":["Data Structures","Competitive Programming (500+ problems)","Digital Signal Processing","Computer Architecture","Electronics"]},
+soft:["Analytical Thinking & Problem Solving","Teamwork & Collaboration","Continuous Learning & Adaptability","Time & Task Management","Effective Communication & Technical Presentation","Attention to Detail & Data Accuracy"],
+projects:[
+{t:"Client Data Analysis Project (In Progress)",d:"Currently working on a data analysis project for a client company, delivered through my HVIA internship.",tags:["In progress","Data Analysis","HVIA"],gh:"",pts:["Ongoing work: data extraction, analysis and insights for the client.","Repository is updated as the project progresses."]},
+{t:"Olist End-to-End Data Pipeline & Analytics",d:"Built during my HVIA internship. A Python ETL pipeline loads 9 raw e-commerce datasets into a SQL Server Star Schema, with Power BI dashboards and a business findings presentation.",img:"assets/olist.jpg",tags:["Python","Pandas","SQLAlchemy","SQL Server","Star Schema","Power BI","DAX"],gh:"Olist-End-to-End-Data-Pipeline-And-Analytics",
+pts:["Star Schema: one fact table (order items) plus 7 dimensions (customers, products, sellers, geolocation, 3 date dimensions).","Primary and foreign keys added in SQL to guarantee referential integrity.","Two-page Power BI report: Orders and Customer analytics.","Findings: about 8.1% of deliveries were late and rated far lower (4.29 vs 2.57 stars), sales concentrate in few sellers, and few customers reorder. Correlations on 2016–2018 data, not proven causes."],
+code:"fact_order_items = dfs[\"order_items\"].drop_duplicates()\nfact_order_items = fact_order_items.merge(orders_subset[[...]], on=\"order_id\", how=\"inner\")\nfact_order_items.to_sql(\"fact_order_items\", engine,\n    if_exists=\"replace\", index=False, chunksize=10000)"},
+{t:"SQL Server ETL & Cleaned Relational Warehouse",d:"A T-SQL pipeline that cleans, deduplicates and loads e-commerce data into a separate target database without altering the source.",tags:["T-SQL","SQL Server","CTEs","Window Functions","Constraints"],gh:"SQL-Server-Data-Warehouse-ETL",
+pts:["7 target tables: feedback, users, orders, products, sellers, order items, payments.","Deduplication with ROW_NUMBER() OVER (PARTITION BY ...), TRIM and CAST normalization.","CHECK, PRIMARY KEY and FOREIGN KEY constraints enforce integrity.","Non-destructive: the legacy source database stays untouched."],
+code:"WITH CleanData AS (\n  SELECT [order_id], [user_name], [order_status],\n    ROW_NUMBER() OVER (PARTITION BY [order_id]\n      ORDER BY [estimated_time_delivery] DESC) AS rowdata\n  FROM [E-commerce].dbo.order_dataset\n  WHERE [order_id] IS NOT NULL)\nINSERT INTO [Orders] (...) SELECT ... FROM CleanData WHERE rowdata = 1;"},
+{t:"Python & SQL E-Commerce ETL",d:"Automated pipeline that cleans and validates sales data in Python, then stages it in SQL Server with strict constraints.",tags:["Python","Pandas","NumPy","SQL Server","BULK INSERT"],gh:"Python-SQL-Ecommerce-ETL",
+pts:["Standardized columns, parsed dates, removed invalid and duplicate rows, normalized text.","Outliers in Sales and Profit capped with the IQR method.","Four assert-based data quality checks before export.","SQL staging table with CHECK constraints, loaded via BULK INSERT."],
+code:"upper_bound = Q3 + (1.5 * IQR)\nlower_bound = Q1 - (1.5 * IQR)\n...\nassert df[\"Order_ID\"].is_unique, \"Data Quality Error: Duplicate Order IDs found!\"\nassert (df[\"Sales\"] >= 0).all(), \"Data Quality Error: Negative sales values found!\""},
+{t:"AdventureWorks Sales Analytics Dashboard",d:"Interactive Power BI dashboard tracking orders, revenue, product categories, territories and order statuses, with custom tooltips.",img:"assets/adventureworks.gif",tags:["Power BI","DAX","Data Modeling","Tooltips","Slicers"],gh:"AdventureWorks-Sales-Analytics-Dashboard-PowerBI",
+pts:["KPI cards: 24K order lines and 33.93M total due.","Trend from Jul 2011 to May 2014 with a date range slicer.","Category and territory breakdowns, status bars and a sub-category treemap."]},
+{t:"Pizza Sales Analytics Dashboard",d:"Power BI dashboard analyzing revenue, category and size performance, and peak ordering hours.",img:"assets/pizza.gif",tags:["Power BI","Power Query","DAX"],gh:"Pizza-Sales-Analytics-PowerBI",
+pts:["Category (Chicken, Classic, Supreme, Veggie) and size performance.","Hourly revenue trend to spot peak order times.","Data shaped in Power Query with DAX measures."]},
+{t:"E-Commerce Sales Tableau Dashboard",d:"Tableau Public dashboard on sales, product performance and customer distribution by state.",tags:["Tableau","Geographic Mapping","Interactive Filters"],gh:"E-Commerce-Tableau-Dashboard",
+live:"https://public.tableau.com/views/Book1_17885576931590/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+pts:["Top product categories driving revenue and cost.","Order quantity by state to highlight dense markets.","Price versus final value analysis."]}],
+certs:[
+["Data Analytics & BI (144 hrs)","ITI · Aug–Sep 2026","assets/cert-iti.jpg"],
+["Data Warehousing: Schema, ETL, Optimal Performance","Coursera · Sep 2026","assets/cert-coursera.jpg","https://www.coursera.org/account/accomplishments/verify/KU6V8RZ25I7S"],
+["Overview of AI","Huawei ICT Academy · Sep 2026","assets/cert-huawei.jpg"],
+["Database Fundamentals","ITI Platform · Sep 2026","assets/cert-db.jpg"],
+["Computer Network Fundamentals","ITI Platform · Sep 2026","assets/cert-network.jpg"],
+["AI for You (course completion)","Oracle University · Aug 2026","assets/cert-oracle.jpg"],
+["Freelancing (5 courses)","ITI Platform · Aug–Sep 2026: Upwork, Mostaql, Khamsat, Freelancing Basics, Find Your Freelance Fit",null,null,["assets/cert-f1.jpg","assets/cert-f2.jpg","assets/cert-f3.jpg","assets/cert-f4.jpg","assets/cert-f5.jpg"]]],
+links:{gh:"https://github.com/Hager-Abdelnasser",li:"https://www.linkedin.com/in/hager-abdelnasser-b05a95356/",em:"hagerabdelnasser933@gmail.com",wa:"https://wa.me/Hager_AbdelNasser_",waName:"Hager_AbdelNasser_"}
+};
+/* ===== END CONTENT ===== */
+const $=id=>document.getElementById(id),E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const chips=a=>'<div class="chips">'+a.map(x=>'<span>'+E(x)+'</span>').join('')+'</div>';
+const L=DATA.links,GH="https://github.com/Hager-Abdelnasser/";
+$('role').textContent=DATA.role;$('nm').textContent=DATA.name;$('tag').textContent=DATA.tagline;$('ab').textContent=DATA.about;
+$('hb').innerHTML='<a class="btn p" href="#projects">View projects</a><a class="btn s" href="#contact">Contact me</a><a class="btn s" href="assets/Hager_Abdelnasser_CV.pdf" target="_blank" rel="noopener">Download CV</a><a class="btn s" href="'+L.gh+'" target="_blank" rel="noopener">GitHub</a>';
+$('bg').innerHTML=DATA.badges.map(b=>'<span class="bd">'+E(b)+'</span>').join('');
+$('ed').innerHTML=DATA.edu.map(e=>'<div class="card"><h3>'+E(e.t)+'</h3><div class="m">'+E(e.m)+'</div>'+chips(e.c)+'</div>').join('');
+$('ex').innerHTML=DATA.exp.map(x=>'<div class="it"><h3>'+E(x[0])+' · '+E(x[1])+'</h3><div class="d">'+E(x[2])+'</div><p>'+E(x[3])+'</p></div>').join('');
+$('sk').innerHTML=Object.entries(DATA.skills).map(([k,v])=>'<div class="card"><h3>'+E(k)+'</h3>'+chips(v)+'</div>').join('');
+$('pj').innerHTML=DATA.projects.map(p=>'<div class="card pj">'+(p.img?'<img class="pv" loading="lazy" src="'+p.img+'" alt="'+E(p.t)+'">':'')+'<h3>'+E(p.t)+'</h3><p class="m">'+E(p.d)+'</p>'+chips(p.tags)+'<ul>'+p.pts.map(x=>'<li>'+E(x)+'</li>').join('')+'</ul>'+(p.code?'<details><summary>Code excerpt</summary><pre><code>'+E(p.code)+'</code></pre></details>':'')+'<p class="acts"><a class="btn p" href="'+(p.gh?GH+p.gh:L.gh)+'" target="_blank" rel="noopener">View on GitHub</a>'+(p.live?'<a class="btn s" href="'+p.live+'" target="_blank" rel="noopener">Live dashboard</a>':'')+'</p></div>').join('');
+$('so').innerHTML=DATA.soft.map(x=>'<div class="card"><h3>'+E(x)+'</h3></div>').join('');
+$('ce').innerHTML=DATA.certs.map(c=>{const u=c[3]||c[2],i=c[2]?'<img loading="lazy" src="'+c[2]+'" alt="">':'',th=c[4]?'<div class="th5">'+c[4].map(x=>'<a href="'+x+'" target="_blank" rel="noopener"><img loading="lazy" src="'+x+'" alt=""></a>').join('')+'</div>':'',b='<h3>'+E(c[0])+'</h3><div class="m">'+E(c[1])+'</div>'+i+th;return u?'<a class="card" href="'+u+'" target="_blank" rel="noopener">'+b+'</a>':'<div class="card'+(c[4]?' wide':'')+'">'+b+'</div>'}).join('');
+$('ctc').innerHTML='<div class="grid"><a class="card" href="assets/Hager_Abdelnasser_CV.pdf" target="_blank" rel="noopener"><h3>Resume</h3><div class="m">Download my CV (PDF)</div></a><a class="card" href="mailto:'+L.em+'"><h3>Email</h3><div class="m">'+L.em+'</div></a><a class="card" href="'+L.li+'" target="_blank" rel="noopener"><h3>LinkedIn</h3><div class="m">Hager Abdelnasser</div></a><a class="card" href="'+L.gh+'" target="_blank" rel="noopener"><h3>GitHub</h3><div class="m">Hager-Abdelnasser</div></a><a class="card" href="'+L.wa+'" target="_blank" rel="noopener"><h3>WhatsApp</h3><div class="m">@'+L.waName+'</div></a></div>';
+(function(){const w=["Data Engineer","Data Analyst","AI Solutions","ETL & Data Warehousing"],el=$('role');let i=0,j=0,d=0;(function t(){const x=w[i];el.textContent=x.slice(0,j)+'|';if(!d){if(j<x.length)j++;else{d=1;return setTimeout(t,1400)}}else{if(j>0)j--;else{d=0;i=(i+1)%w.length}}setTimeout(t,d?35:80)})()})();
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target);setTimeout(()=>e.target.style.transitionDelay='',900)}}),{threshold:.1});
+document.querySelectorAll('.card,.it,h2,.hero>div,.pw').forEach((e,i)=>{e.classList.add('rv');e.style.transitionDelay=(i%4)*80+'ms';rv.observe(e)});
+document.addEventListener('mousemove',e=>{const c=e.target.closest&&e.target.closest('.card');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}});
+const secs=[...document.querySelectorAll('section')],nl=[...document.querySelectorAll('nav a')];
+addEventListener('scroll',()=>{const h=document.documentElement;$('pb').style.width=scrollY/(h.scrollHeight-innerHeight)*100+'%';let c='';secs.forEach(x=>{if(scrollY>=x.offsetTop-140)c=x.id});nl.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+c))},{passive:true});
+(function(){if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;const c=$('bg'),x=c.getContext('2d'),m={x:-999,y:-999};let W,H,P;const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight;P=Array.from({length:Math.min(90,W/14|0)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4}))};rs();addEventListener('resize',rs);addEventListener('mousemove',e=>{m.x=e.clientX;m.y=e.clientY});
+(function f(){x.clearRect(0,0,W,H);P.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.fillStyle='rgba(45,225,230,.75)';x.beginPath();x.arc(p.x,p.y,1.6,0,7);x.fill();for(let j=i+1;j<P.length;j++){const q=P[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<130){x.strokeStyle='rgba(45,225,230,'+.16*(1-d/130)+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}const dm=Math.hypot(p.x-m.x,p.y-m.y);if(dm<160){x.strokeStyle='rgba(30,140,255,'+.45*(1-dm/160)+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}});requestAnimationFrame(f)})()})();
+</script>
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import{getFirestore,collection,addDoc,getDocs,query,where,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+const $=id=>document.getElementById(id),E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const db=getFirestore(initializeApp(CONFIG.firebase));
+async function load(){try{const s=await getDocs(query(collection(db,"feedback"),where("approved","==",true)));
+const a=s.docs.map(d=>d.data()).sort((x,y)=>(y.createdAt?.seconds||0)-(x.createdAt?.seconds||0));
+$("fw").innerHTML=a.map(f=>'<div class="card"><b>'+E(f.name)+'</b> <span class="st">'+"★".repeat(f.rating||0)+'</span><p>'+E(f.message)+'</p></div>').join("")}catch(e){}}
+$("ff").onsubmit=async e=>{e.preventDefault();const b=e.target.querySelector("button"),st=$("fs");b.disabled=true;st.textContent="Sending...";
+const n=$("fn").value.trim(),m=$("fm").value.trim(),r=parseInt($("fr").value,10);
+try{await addDoc(collection(db,"feedback"),{name:n,message:m,rating:r,approved:false,createdAt:serverTimestamp()});
+if(CONFIG.formspree)fetch(CONFIG.formspree,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({name:n,rating:r,message:m})}).catch(()=>{});
+e.target.reset();st.textContent="Thank you! Your feedback will appear after approval."}catch(x){st.textContent="Could not send. Please try again later."}b.disabled=false};
+load();
+</script></body></html>

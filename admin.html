@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Feedback Admin</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;background:#f6f8fa;color:#17222e;margin:0;padding:24px}.w{max-width:760px;margin:auto}
+.c{background:#fff;border:1px solid #e1e7ec;border-radius:12px;padding:14px 16px;margin:12px 0}.c.p{border-left:5px solid #e0a800}.c.a{border-left:5px solid #2a9d5c}
+button{padding:7px 14px;border-radius:8px;border:1px solid #1f7a8c;background:#1f7a8c;color:#fff;cursor:pointer;margin-right:6px}button.d{background:#fff;color:#b3261e;border-color:#b3261e}
+small{color:#5b6b7b}</style></head><body><div class="w"><h1>Feedback Admin</h1><div id="o"></div><div id="l"></div></div>
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import{getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import{getFirestore,collection,getDocs,updateDoc,deleteDoc,doc}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+const app=initializeApp({apiKey:"AIzaSyBLwPKqlgqPKmulUc7FzD3LJzHkWz1JPYE",authDomain:"hager-portfolio-64f60.firebaseapp.com",projectId:"hager-portfolio-64f60",storageBucket:"hager-portfolio-64f60.firebasestorage.app",messagingSenderId:"987533832436",appId:"1:987533832436:web:34ac17b38aa73bb4cc6ea1"});
+const au=getAuth(app),db=getFirestore(app),$=i=>document.getElementById(i),E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function list(){try{const s=await getDocs(collection(db,"feedback"));
+const a=s.docs.map(d=>({id:d.id,...d.data()})).sort((x,y)=>(y.createdAt?.seconds||0)-(x.createdAt?.seconds||0));
+$("l").innerHTML=a.length?a.map(f=>'<div class="c '+(f.approved?'a':'p')+'"><b>'+E(f.name)+'</b> '+"★".repeat(f.rating||0)+' <small>'+(f.approved?'Approved':'Pending')+'</small><p>'+E(f.message)+'</p>'+(f.approved?'':'<button data-a="'+f.id+'">Approve</button>')+'<button class="d" data-d="'+f.id+'">Delete</button></div>').join(""):"<p>No feedback yet.</p>"}catch(e){$("l").innerHTML="<p>Access denied. Sign in with the owner Google account.</p>"}}
+document.addEventListener("click",async e=>{const t=e.target;
+if(t.dataset.a){await updateDoc(doc(db,"feedback",t.dataset.a),{approved:true});list()}
+if(t.dataset.d&&confirm("Delete this message?")){await deleteDoc(doc(db,"feedback",t.dataset.d));list()}
+if(t.id==="in")signInWithPopup(au,new GoogleAuthProvider());if(t.id==="out")signOut(au)});
+onAuthStateChanged(au,u=>{if(u){$("o").innerHTML='<p>'+E(u.email)+' <button id="out">Sign out</button></p>';list()}else{$("o").innerHTML='<button id="in">Sign in with Google</button>';$("l").innerHTML=""}});
+</script></body></html>
